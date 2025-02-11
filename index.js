@@ -17,15 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
         // Commission Calculation
         let commissionAmount = (salePrice * commission) / 100;
 
-        // Ownerhero saving logic based on bedroom count
+        // Ownerhero base saving logic
         let baseSaving = bedrooms >= 4 ? 11950 : 10950;
 
-        let totalSavings = commissionAmount + marketing + baseSaving;
+        // Final savings calculation
+        let totalSavings = (commissionAmount + marketing) - baseSaving;
 
         document.getElementById('savings').value = `$${totalSavings.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     }
 
-    // Ensure values are formatted on input
+    // Attach event listeners to input fields for real-time calculation
     document.getElementById('salePrice').addEventListener('input', function () {
         formatCurrency(this);
         calculateSavings();
