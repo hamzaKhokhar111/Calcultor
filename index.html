@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ownerhero Savings Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Ownerhero Savings Calculator</h2>
+        
+        <label for="salePrice">Home Sale Price:</label>
+        <input type="text" id="salePrice" oninput="formatCurrency(this)">
+        
+        <label for="commission">Agent Commission (%):</label>
+        <input type="number" id="commission" placeholder="e.g. 5">
+        
+        <label for="marketing">Marketing Costs:</label>
+        <input type="text" id="marketing" oninput="formatCurrency(this)">
+        
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" placeholder="e.g. 3">
+        
+        <label for="savings">Your Total Savings:</label>
+        <input type="text" id="savings" readonly>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Calculator Container */
+.calculator {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: #f8f9fa;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Input Focus Effect */
+input:focus {
+    border-color: #4ca1af;
+    box-shadow: 0 0 5px rgba(76, 161, 175, 0.5);
+    transform: scale(1.02);
+}
+
+/* Read-Only Input */
+input[readonly] {
+    background: #e3f2fd;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+}
